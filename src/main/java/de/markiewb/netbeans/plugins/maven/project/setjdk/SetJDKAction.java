@@ -42,14 +42,14 @@ import org.openide.util.WeakListeners;
 import org.openide.util.actions.Presenter;
 
 @ActionID(
-        category = "Build",
+        category = "Maven",
         id = "markiewb.nb.maven.project.setjdk.SetJDKAction"
 )
 @ActionRegistration(
         displayName = "#CTL_SetJDKAction", lazy = false
 )
-@ActionReference(path = "Projects/Actions")
-@Messages("CTL_SetJDKAction=SetJDKAction")
+@ActionReference(position = 1550, path = "Projects/org-netbeans-modules-maven/Actions")
+@Messages("CTL_SetJDKAction=Set JDK")
 public final class SetJDKAction extends AbstractAction implements ActionListener, Presenter.Popup {
 
     /**
@@ -99,8 +99,8 @@ public final class SetJDKAction extends AbstractAction implements ActionListener
 
     @Override
     public JMenuItem getPopupPresenter() {
-        JMenuItem result = new JMenu("Set JDK");
-
+        JMenuItem result = new JMenu(Bundle.CTL_SetJDKAction());
+            
         JavaPlatformManager jpm = JavaPlatformManager.getDefault();
         List<JavaPlatform> asList = Arrays.asList(jpm.getInstalledPlatforms());
         for (JavaPlatform jp : asList) {

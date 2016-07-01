@@ -93,7 +93,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <description>This plugin adds an action to the project node, which allows you to set the Java platform for multiple maven project at the same time.  
+    <description>This plugin adds an action to the Maven project nodes, which allows you to set the Java platform for multiple maven project at the same time.  
 
 &lt;p&gt;
 Features:
@@ -106,16 +106,18 @@ Features:
 
 
 &lt;p&gt;
-Updates in 1.0.1
+&lt;h2&gt;Updates in 1.0.1:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-maven-project-setjdk/issues/3"&gt;Issue  3&lt;/a&gt;]: Fixed  java.util.NoSuchElementException at java.util.ArrayList$Itr.next&lt;/li&gt;
+&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-maven-project-setjdk/issues/3"&gt;Issue  3&lt;/a&gt;]: Fixed: java.util.NoSuchElementException at java.util.ArrayList$Itr.next&lt;/li&gt;
+&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-maven-project-setjdk/issues/1"&gt;Issue  1&lt;/a&gt;]: Fixed: limit to maven-based projects only&lt;/li&gt;
+
 &lt;/ul&gt;
 
 &lt;h2&gt;Updates in 1.0.0:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;initial version&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/p&gt;
 
 &lt;p&gt;Provide defects, request for enhancements and feedback at &lt;a href="https://github.com/markiewb/nb-maven-project-setjdk/issues"&gt;https://github.com/markiewb/nb-maven-project-setjdk/issues&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Compatible to &gt;=NB 8.0&lt;/p&gt;
