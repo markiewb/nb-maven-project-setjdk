@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.markiewb.netbeans.plugins</groupId>
     <artifactId>nb.maven.project.setjdk</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Set JDK for Maven projects</name>
     <packaging>nbm</packaging>
     <build>
@@ -103,6 +103,13 @@ Features:
 &lt;/p&gt;
 
 &lt;img src="https://raw.github.com/markiewb/nb-maven-project-setjdk/master/doc/screenshot-1.0.0.png"/&gt;
+
+
+&lt;p&gt;
+Updates in 1.0.1
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href="https://github.com/markiewb/nb-maven-project-setjdk/issues/3"&gt;Issue  3&lt;/a&gt;]: Fixed  java.util.NoSuchElementException at java.util.ArrayList$Itr.next&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2&gt;Updates in 1.0.0:&lt;/h2&gt;
 &lt;ul&gt;

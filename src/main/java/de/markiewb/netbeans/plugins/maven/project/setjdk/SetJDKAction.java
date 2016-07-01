@@ -104,12 +104,14 @@ public final class SetJDKAction extends AbstractAction implements ActionListener
         JavaPlatformManager jpm = JavaPlatformManager.getDefault();
         List<JavaPlatform> asList = Arrays.asList(jpm.getInstalledPlatforms());
         for (JavaPlatform jp : asList) {
-            final String platformId = jp.getProperties().get("platform.ant.name");
-            final String displayName = String.format("%s (%s)", jp.getDisplayName(), jp.getInstallFolders().iterator().next().getPath());
+            final String platformId = getPlatformId(jp);
+            final String displayName = getDisplayName(jp);
+            if (isBlank(platformId) || isBlank(displayName)) {
+                continue;
+            }
             final JMenuItem item = new JMenuItem(new AbstractAction(displayName) {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    System.out.println("curr = " + platformId);
                     for (Project project : context) {
                         final AuxiliaryProperties props = project.getLookup().lookup(AuxiliaryProperties.class);
                         if (null != props) {
@@ -125,4 +127,21 @@ public final class SetJDKAction extends AbstractAction implements ActionListener
         return result;
     }
 
+    private boolean isBlank(String string) {
+        return "".equals(string) || null == string;
+    }
+
+    private static String getDisplayName(JavaPlatform jp) {
+        if (null == jp) {
+            return null;
+        }
+        if (null == jp.getInstallFolders()) {
+            return null;
+        }
+        return String.format("%s (%s)", jp.getDisplayName(), jp.getInstallFolders().iterator().next().getPath());
+    }
+
+    private static String getPlatformId(JavaPlatform jp) {
+        return jp.getProperties().get("platform.ant.name");
+    }
 }
