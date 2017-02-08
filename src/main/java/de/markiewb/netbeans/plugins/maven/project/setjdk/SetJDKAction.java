@@ -135,7 +135,7 @@ public final class SetJDKAction extends AbstractAction implements ActionListener
         if (null == jp) {
             return null;
         }
-        if (null == jp.getInstallFolders()) {
+        if (null == jp.getInstallFolders() || jp.getInstallFolders().isEmpty()) {
             return null;
         }
         return String.format("%s (%s)", jp.getDisplayName(), jp.getInstallFolders().iterator().next().getPath());

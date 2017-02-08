@@ -15,10 +15,22 @@ Features:
 
 <img src="https://raw.github.com/markiewb/nb-maven-project-setjdk/master/doc/screenshot-1.0.0.png"/>
 
+<p>
+<h2>Updates in 1.0.2:</h2>
+<ul>
+<li>[<a href="https://github.com/markiewb/nb-maven-project-setjdk/issues/4">Issue 4</a>]: Fixed: NPE on Right-Click</li>
+</ul>
+<h2>Updates in 1.0.1:</h2>
+<ul>
+<li>[<a href="https://github.com/markiewb/nb-maven-project-setjdk/issues/3">Issue  3</a>]: Fixed: java.util.NoSuchElementException at java.util.ArrayList$Itr.next</li>
+<li>[<a href="https://github.com/markiewb/nb-maven-project-setjdk/issues/1">Issue  1</a>]: Fixed: limit to maven-based projects only</li>
+</ul>
+
 <h2>Updates in 1.0.0:</h2>
 <ul>
 <li>initial version</li>
 </ul>
+</p>
 
 
 <p>Provide defects, request for enhancements and feedback at <a href="https://github.com/markiewb/nb-maven-project-setjdk/issues">https://github.com/markiewb/nb-maven-project-setjdk/issues</a></p>
